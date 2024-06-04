@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <h2 class="text-center mt-5 mb-5">Todo Application</h2>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="text-center mb-5">
+      <div class="form-group">
+        <input
+          ngModel
+          name="myTask"
+          #myTask
+          required
+          id="task"
+          class="form-control"
+          placeholder="Type your task"
+          type="text"
+        />
+        <button
+          class="btn btn-primary"
+          type="submit"
+          id="button-type"
+          [disabled]="form.invalid"
+        >
+          Do It
+        </button>
+        <small
+          color="red"
+          class="error-massage"
+          *ngIf="form.invalid && form.dirty"
+        >
+          Required Filed
+        </small>
+      </div>
+    </form>
+    <hr />
+    <table class="table table-striped table-dark mt-5">
+      <thead>
+        <tr>
+          <th>Tasks</th>
+          <th>Complited</th>
+          <th>Edit</th>
+          <th>Save</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let task of taskArray; index as i"
+          [ngClass]="{ complited: task.isComplited == true }"
+        >
+          <td>
+            <input
+              class="form-control"
+              type="text"
+              id="taskInTable"
+              #taskInput
+              value="{{ task.taskName }}"
+              [readonly]="!task.isEditable"
+            />
+          </td>
+          <td>
+            <label id="myCheckbox" (change)="onCheck(i)">
+              <input type="checkbox" [checked]="task.isComplited" />
+              <span class="checkmark"></span>
+            </label>
+          </td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm"
+              (click)="onEdit(i)"
+              [disabled]="task.isEditable"
+            >
+              <i class="fi fi-br-edit"> Edit </i>
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-warning btn-sm"
+              (click)="onSave(i, taskInput.value)"
+              [disabled]="!task.isEditable"
+            >
+              <i class="fi fi-br-bookmark"> Save </i>
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="onDelete(i)">
+              <i class="fi fi-br-trash"> Delete </i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

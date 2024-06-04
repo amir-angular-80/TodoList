@@ -1,0 +1,183 @@
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+#submit {
+  margin-top: 20px;
+}
+#myCheckbox {
+  margin-left: 30px;
+  background-color: #313131 !important;
+}
+.complited {
+  text-decoration: line-through;
+}
+.table {
+  background: transparent !important;
+  --bs-table-bg: transparent;
+}
+#task {
+  width: 60% !important;
+  display: inline;
+  border-radius: 21px;
+  background: linear-gradient(225deg, #2e2e2e, #373737);
+  box-shadow: -5px 5px 10px #313131, 5px -5px 10px #353535;
+  border: none;
+  color: #e0d2e7;
+  padding: 8px;
+}
+.form-control::placeholder {
+  color: #7a7a7a;
+}
+.form-control:focus {
+  background: linear-gradient(225deg, #2e2e2e, #373737);
+  color: #e0d2e7;
+}
+#button-type {
+  display: inline;
+  margin-left: 8px;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #e0d2e7;
+  cursor: pointer;
+  border-radius: 21px;
+  background: linear-gradient(225deg, #2e2e2e, #373737);
+  box-shadow: -14px 14px 27px #292929, 14px -14px 27px #3d3d3d;
+  transition: all 0.2s ease;
+}
+
+#button-type:active {
+  transform: scale(0.96);
+}
+
+#button-type:before,
+#button-type:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+#button-type:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #320975 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #320975 20%, transparent 30%),
+    radial-gradient(circle, #320975 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #320975 15%, transparent 20%),
+    radial-gradient(circle, #320975 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+#button-type:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.table {
+  color: #e0d2e7 !important;
+  --bs-table-color: #e0d2e7 !important;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  background: #2e2e2e;
+  box-shadow: 20px 20px 17px #272727, -20px -20px 17px #353535;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: black;
+  border-style: solid;
+  border-width: 0;
+}
+
+#taskInTable {
+  font-size: 14px;
+  max-width: 300px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  color: burlywood;
+  background: #d5c5c512;
+  border-radius: 2px;
+}
+#taskInTable:read-only{
+  background: none;
+  border: none;
+
+}
+.btn-primary{
+  box-shadow: 2px 2px 5px rgb(13 110 253), -2px -2px 5px rgb(13 110 253);
+  width: 80px;
+  font-size: 12px;
+}
+.btn-warning{
+  box-shadow: 2px 2px 5px #FFCA2C, -2px -2px 5px #FFCA2C;
+  width: 80px;
+  font-size: 12px;
+}
+.btn-danger{
+  box-shadow: 2px 2px 5px #BB2D3B, -2px -2px 5px #BB2D3B;
+  width: 80px;
+  font-size: 12px;
+}

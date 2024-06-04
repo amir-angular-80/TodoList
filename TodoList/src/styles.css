@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body,
+html {
+  font-family: cursive !important;
+  background-color: #333333 !important;
+  color: #f1aa8f !important;
+}
